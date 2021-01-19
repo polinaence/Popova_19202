@@ -1,6 +1,3 @@
-//
-// Created by Anna on 28.12.2020.
-//
 
 #include "TritSet.h"
 #include <cmath>
