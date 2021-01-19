@@ -1,0 +1,17 @@
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get update -y
+          - apt-get install -y cmake
+          - apt-get install -y libgtest-dev
+          - cd /usr/src/gtest
+          - cmake .
+          - make
+          - cp *.a /usr/lib
+          - cd /opt/atlassian/pipelines/agent/build/lab_1/
+          - cmake .
+          - make
+          - ./Lab_1
